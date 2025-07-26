@@ -4,7 +4,7 @@ import SwiftUI
 import Lottie
 
 @available(iOS 16.0, *)
-struct StartWindow: View {
+public struct StartWindow: View {
     
     @Binding var isFinished: Bool
     
@@ -12,7 +12,7 @@ struct StartWindow: View {
         Bundle.main.url(forResource: "AnimadatedImage", withExtension: "json")
     }
     
-    var body: some View {
+    public var body: some View {
         LottieView (
             animation: .filepath(path.path())
         )
