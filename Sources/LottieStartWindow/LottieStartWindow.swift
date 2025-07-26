@@ -4,7 +4,7 @@ import SwiftUI
 import Lottie
 
 @available(iOS 16.0, *)
-struct LottieStartWindow: View {
+struct StartWindow: View {
     
     @Binding var isFinished: Bool
     
