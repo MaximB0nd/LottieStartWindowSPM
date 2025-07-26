@@ -23,6 +23,7 @@ public struct AnimatedIcon: View {
                 withAnimation {
                     isFinished = true
                 }
-        }
+            }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 }
