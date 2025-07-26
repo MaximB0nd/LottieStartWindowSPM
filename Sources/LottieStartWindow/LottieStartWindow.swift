@@ -8,6 +8,10 @@ public struct StartWindow: View {
     
     @Binding var isFinished: Bool
     
+    public init(isFinished: Binding<Bool>) {
+        self._isFinished = isFinished
+    }
+    
     var path: URL! {
         Bundle.main.url(forResource: "AnimadatedImage", withExtension: "json")
     }
