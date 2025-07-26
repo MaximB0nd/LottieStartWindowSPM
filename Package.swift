@@ -8,6 +8,7 @@ import PackageDescription
 
 let package = Package(
     name: "LottieStartWindow",
+    platforms: [.iOS(.v18)], // Укажите нужную версию iOS
     products: [
         .library(
             name: "LottieStartWindow",
