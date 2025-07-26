@@ -12,13 +12,13 @@ public struct StartWindow: View {
         self._isFinished = isFinished
     }
     
-    var path: URL! {
-        Bundle.main.url(forResource: "AnimadatedImage", withExtension: "json")
+    var path: URL? {
+        Bundle.main.url(forResource: "AnimatedImage", withExtension: "json")
     }
     
     public var body: some View {
         LottieView (
-            animation: .filepath(path.path())
+            animation: path != nil ? .filepath(path!.path()) : .asset("AnimatedImage")
         )
         .playing()
         .animationDidFinish { _ in
