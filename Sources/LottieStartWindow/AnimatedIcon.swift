@@ -3,7 +3,6 @@
 import SwiftUI
 import Lottie
 
-@available(iOS 16.0, *)
 public struct AnimatedIcon: View {
     
     @Binding var isFinished: Bool
@@ -21,7 +20,9 @@ public struct AnimatedIcon: View {
         LottieView(animation: animation)
             .playing()
             .animationDidFinish { _ in
-                isFinished = true
+                withAnimation {
+                    isFinished = true
+                }
         }
     }
 }
